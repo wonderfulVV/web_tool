@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具使用指南 - 汪汪导航</title>
+    <!-- 搜索引擎优化标签 -->
+    <link rel="canonical" href="https://dognav.org/pages/tool_guide.html" />
+    <meta name="keywords" content="工具使用指南,AI工具教程,在线工具教程,开发工具使用,绘图工具教程" />
+    <meta name="description" content="汪汪导航工具使用指南，提供各类AI工具、开发工具、绘图工具等的详细使用方法和实用技巧。" />
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min-4.3.1.css">
+    <!-- 引入 Font Awesome -->
+    <link rel="stylesheet" href="/assets/fontawesome-5.15.4/css/all.min.css">
+    <!-- 引入自定义样式 -->
+    <link rel="stylesheet" href="/assets/css/style-3.03029.2.css">
+    <style>
+        body {
+            background-color: #f5f7fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        .card-header {
+            background-color: #fff;
+            padding: 20px 25px;
+            border-bottom: 1px solid #e1e8ed;
+        }
+        .card-body {
+            padding: 25px;
+        }
+        .tool-category {
+            margin-bottom: 30px;
+        }
+        .tool-category h2 {
+            color: #007bff;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e1e8ed;
+        }
+        .tool-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .tool-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        .tool-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .tool-item p {
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+        .tool-item .tips {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 4px solid #007bff;
+        }
+        .tool-item .tips i {
+            color: #007bff;
+            margin-right: 5px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .back-to-top.show {
+            opacity: 1;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex align-items-center">
+                    <a href="../index.html" class="mr-3">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <h1 class="h3 mb-0">工具使用指南</h1>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="mb-4">本指南提供了汪汪导航中收录的各类工具的详细使用方法和实用技巧，帮助您更好地利用这些工具提升工作和学习效率。</p>
+                
+                <!-- AI 工具使用指南 -->
+                <div class="tool-category">
+                    <h2><i class="fas fa-robot mr-2"></i>AI 工具使用指南</h2>
+                    
+                    <div class="tool-item">
+                        <h3>NanoBanana 使用技巧</h3>
+                        <p>NanoBanana 是一款强大的 AI 图像编辑工具，以下是一些使用技巧和功能详解：</p>
+                        <div class="tips">
+                            <p><i class="fas fa-lightbulb"></i> 具体描述：输入需求时尽量具体且详细，如"用 NanoBanana 生成一张治愈系插画，主体是一只抱着书本的兔子，背景是星空"，而不是模糊的"生成一张图"。</p>
+                            <p><i class="fas fa-lightbulb"></i> 多轮迭代：复杂需求分步骤进行，如先改服装再调背景，避免一次指令过多导致混乱。</p>
+                            <p><i class="fas fa-lightbulb"></i> 参考图提升 accuracy：涉及具体元素（如产品、IP），可上传参考图并标注"参考图2中的XX元素"。</p>
+                            <p><i class="fas fa-lightbulb"></i> 优先英文提示词：实测英文效果优于中文，如"Turn this into a 3D figurine"比"转为3D手办"细节更准。</p>
+                            <p><i class="fas fa-lightbulb"></i> 加"限制词"：明确"不修改"的元素，如"禁止改变角色面部特征""服装花纹与参考图100%一致"。</p>
+                            <p><i class="fas fa-lightbulb"></i> 标"材质词"：细化材质描述，如"PVC材质（表面有哑光质感）""金属部件（有拉丝纹理和反光效果）"。</p>
+                            <p><i class="fas fa-lightbulb"></i> 定"光影词"：指定光线方向和效果，如"顶光照射，手办顶部有轻微高光，底部有柔和阴影"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h3>Midjourney 图像生成指南</h3>
+                        <p>Midjourney 是一款强大的AI绘画工具，可以根据文字描述生成高质量图像。</p>
+                        <div class="tips">
+                            <p><i class="fas fa-lightbulb"></i> 描述要包含风格、主题、色彩和构图等元素</p>
+                            <p><i class="fas fa-lightbulb"></i> 指定艺术家风格可以获得特定艺术效果</p>
+                            <p><i class="fas fa-lightbulb"></i> 使用参数调整图像质量和比例</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 开发工具使用指南 -->
+                <div class="tool-category">
+                    <h2><i class="fas fa-code mr-2"></i>开发工具使用指南</h2>
+                    
+                    <div class="tool-item">
+                        <h3>GitHub 使用入门</h3>
+                        <p>GitHub 是开发者常用的代码托管平台，用于版本控制和协作开发。</p>
+                        <div class="tips">
+                            <p><i class="fas fa-lightbulb"></i> 学习Git基本命令：git clone、git add、git commit、git push</p>
+                            <p><i class="fas fa-lightbulb"></i> 使用分支进行功能开发和问题修复</p>
+                            <p><i class="fas fa-lightbulb"></i> 利用Pull Request进行代码审核</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h3>VS Code 效率提升技巧</h3>
+                        <p>Visual Studio Code 是一款流行的轻量级代码编辑器，拥有丰富的插件生态。</p>
+                        <div class="tips">
+                            <p><i class="fas fa-lightbulb"></i> 安装常用插件：Prettier、ESLint、GitLens等</p>
+                            <p><i class="fas fa-lightbulb"></i> 使用快捷键提升编码速度</p>
+                            <p><i class="fas fa-lightbulb"></i> 配置工作区设置以适应个人开发习惯</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 办公学习工具使用指南 -->
+                <div class="tool-category">
+                    <h2><i class="fas fa-briefcase mr-2"></i>办公学习工具使用指南</h2>
+                    
+                    <div class="tool-item">
+                        <h3>Notion 高效笔记技巧</h3>
+                        <p>Notion 是一款功能强大的笔记和项目管理工具，可以帮助您整理思路和管理任务。</p>
+                        <div class="tips">
+                            <p><i class="fas fa-lightbulb"></i> 使用模板快速创建常用页面</p>
+                            <p><i class="fas fa-lightbulb"></i> 利用数据库功能进行内容管理</p>
+                            <p><i class="fas fa-lightbulb"></i> 创建个人知识管理系统(KMS)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-item">
+                        <h3>思维导图工具使用指南</h3>
+                        <p>思维导图是整理思路和规划项目的有效工具，可以帮助您可视化思考过程。</p>
+                        <div class="tips">
+                            <p><i class="fas fa-lightbulb"></i> 从中心主题开始，逐步扩展分支</p>
+                            <p><i class="fas fa-lightbulb"></i> 使用颜色和图标增强视觉效果</p>
+                            <p><i class="fas fa-lightbulb"></i> 定期回顾和更新思维导图</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <div class="footer">
+        <p>© 2025 汪汪导航 | <a href="../index.html">返回主页</a></p>
+    </div>
+    
+    <!-- 引入 jQuery -->
+    <script src="/assets/js/jquery.min-3.2.1.js"></script>
+    <!-- 引入 Bootstrap JS -->
+    <script src="/assets/js/bootstrap.min-4.3.1.js"></script>
+    
+    <script type="text/javascript">
+        // 返回顶部按钮功能
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 页面加载完成后的操作
+        document.addEventListener('DOMContentLoaded', function() {
+            // 可以在这里添加其他初始化代码
+        });
+    </script>
+</body>
+</html>

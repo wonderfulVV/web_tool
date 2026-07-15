@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Sitemap: https://dognav.org/sitemap.xml
+
+# 允许所有主流搜索引擎抓取
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /

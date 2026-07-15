@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站收录申请 - 汪汪导航</title>
+    <!-- 搜索引擎优化标签 -->
+    <link rel="canonical" href="https://dognav.org/pages/submit_site.html" />
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min-4.3.1.css">
+    <!-- 引入 Font Awesome -->
+    <link rel="stylesheet" href="/assets/fontawesome-5.15.4/css/all.min.css">
+    <!-- 引入自定义样式 -->
+    <link rel="stylesheet" href="/assets/css/style-3.03029.2.css">
+    <style>
+        body {
+            background-color: #f5f7fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        .container {
+            max-width: 700px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        .card-header {
+            background-color: #fff;
+            padding: 20px 25px;
+            border-bottom: 1px solid #e1e8ed;
+        }
+        .card-body {
+            padding: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .form-control {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px 12px;
+            transition: border-color 0.3s;
+        }
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .alert {
+            margin-top: 20px;
+            display: none;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+            font-size: 14px;
+        }
+        .note {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex align-items-center">
+                    <a href="../index.html" class="mr-3">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <h1 class="h3 mb-0">网站收录申请</h1>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="mb-4">如果您有希望收录到导航的优质网站，或者对网站有任何建议，请填写以下表单提交给我们。</p>
+                
+                <form id="submitForm" onsubmit="return submitForm(event)">
+                    <!-- 网站名称 -->
+                    <div class="form-group">
+                        <label for="siteName" class="form-label">网站名称 <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="siteName" name="siteName" placeholder="请输入网站名称" required>
+                    </div>
+                    
+                    <!-- 网站URL -->
+                    <div class="form-group">
+                        <label for="siteUrl" class="form-label">网站URL <span class="text-danger">*</span></label>
+                        <input type="url" class="form-control" id="siteUrl" name="siteUrl" placeholder="请输入网站URL，以http://或https://开头" required>
+                        <div class="note">请确保URL格式正确，包含http://或https://</div>
+                    </div>
+                    
+                    <!-- 网站描述 -->
+                    <div class="form-group">
+                        <label for="siteDescription" class="form-label">网站描述 <span class="text-danger">*</span></label>
+                        <textarea class="form-control" id="siteDescription" name="siteDescription" rows="3" placeholder="请简要描述网站的主要功能和特点" required></textarea>
+                        <div class="note">建议描述在50-100字之间，清晰表达网站的核心价值</div>
+                    </div>
+                    
+
+                    <!-- 用户邮箱 -->
+                    <div class="form-group">
+                        <label for="userEmail" class="form-label">您的邮箱 <span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="请输入您的邮箱地址" required>
+                        <div class="note">我们会通过此邮箱与您联系</div>
+                    </div>
+                    
+                    <!-- 其他建议 -->
+                    <div class="form-group">
+                        <label for="additionalSuggestions" class="form-label">其他建议（可选）</label>
+                        <textarea class="form-control" id="additionalSuggestions" name="additionalSuggestions" rows="3" placeholder="如果您有其他建议或问题，请在此填写"></textarea>
+                    </div>
+                    
+                    <!-- 提交按钮 -->
+                    <button type="submit" class="btn btn-primary btn-block">提交申请</button>
+                </form>
+                
+                <!-- 成功提示 -->
+                <div id="successAlert" class="alert alert-success" role="alert">
+                    <i class="fas fa-check-circle mr-2"></i>
+                    <strong>提交成功！</strong> 感谢您的建议，我们会尽快处理您的申请。
+                </div>
+                
+                <!-- 失败提示 -->
+                <div id="errorAlert" class="alert alert-danger" role="alert">
+                    <i class="fas fa-exclamation-circle mr-2"></i>
+                    <strong>提交失败！</strong> 请检查您的网络连接或稍后再试。
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>© 2025 汪汪导航 | <a href="../index.html">返回主页</a></p>
+    </div>
+    
+    <!-- 引入 jQuery -->
+    <script src="/assets/js/jquery.min-3.2.1.js"></script>
+    <!-- 引入 Bootstrap JS -->
+    <script src="/assets/js/bootstrap.min-4.3.1.js"></script>
+    <!-- 引入 EmailJS 库 (本地版本) -->
+    <script src="/assets/js/email.js"></script>
+
+    <script type="text/javascript">
+    /* =====================================================
+    * 1. 你的 EmailJS 配置
+    * ===================================================== */
+    const EMAILJS_PUBLIC_KEY   = 's5uAAgxCmfZ0I8Zi_';   // 用户提供的 public key
+    const EMAILJS_SERVICE_ID   = 'service_wj6imxg';     // EmailJS 服务 ID
+    const EMAILJS_TEMPLATE_ID  = 'template_qek2te7';    // EmailJS 模板 ID
+
+    /* =====================================================
+    * 2. 初始化 EmailJS (根据官网示例使用IIFE方式)
+    * ===================================================== */
+    (function(){
+       emailjs.init({
+         publicKey: EMAILJS_PUBLIC_KEY,
+       });
+    })();
+
+    /* =====================================================
+    * 3. 表单提交处理函数
+    * ===================================================== */
+    function submitForm(event) {
+        event.preventDefault(); // 阻止默认提交
+
+        const submitBtn   = document.querySelector('button[type="submit"]');
+        const successBox  = document.getElementById('successAlert');
+        const errorBox    = document.getElementById('errorAlert');
+
+        /* ---------- 按钮进入加载状态 ---------- */
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> 提交中...';
+
+        /* ---------- 隐藏旧提示 ---------- */
+        successBox.style.display = 'none';
+        errorBox.style.display   = 'none';
+
+        /* ---------- 收集表单数据 ---------- */
+        const fd = {
+            siteName:  document.getElementById('siteName').value.trim(),
+            siteUrl:   document.getElementById('siteUrl').value.trim(),
+            siteDesc:  document.getElementById('siteDescription').value.trim(),
+            category:  document.getElementById('siteCategory').value.trim(),
+            userEmail: document.getElementById('userEmail').value.trim(),
+            extra:     document.getElementById('additionalSuggestions').value.trim() || '无'
+        };
+
+        /* ---------- 发送邮件 ---------- */
+        emailjs.send(
+            EMAILJS_SERVICE_ID, 
+            EMAILJS_TEMPLATE_ID, 
+            {
+                site_name:  fd.siteName,
+                site_url:   fd.siteUrl,
+                site_desc:  fd.siteDesc,
+                category:   fd.category,
+                user_email: fd.userEmail,
+                reason:     fd.extra
+            }
+        )
+        .then(() => {               // 成功
+            successBox.style.display = 'block';
+            document.getElementById('submitForm').reset();
+        })
+        .catch(err => {             // 失败
+            console.error('EmailJS 发送失败:', err);
+            errorBox.style.display = 'block';
+        })
+        .finally(() => {            // 恢复按钮
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '提交申请';
+        });
+
+        return false;
+    }
+
+    /* =====================================================
+    * 4. 页面加载完后的DOM操作
+    * ===================================================== */
+    document.addEventListener('DOMContentLoaded', function () {
+        // 绑定表单提交事件
+        const form = document.getElementById('submitForm');
+        if (form) {
+            // 确保只绑定一次事件监听器
+            form.addEventListener('submit', submitForm);
+        }
+        
+        // URL输入框实时验证
+        const siteUrlInput = document.getElementById('siteUrl');
+        if (siteUrlInput) {
+            siteUrlInput.addEventListener('input', function () {
+                const val = this.value;
+                this.setCustomValidity(
+                    val && !/^https?:\/\//.test(val) ? '请输入以 http:// 或 https:// 开头的 URL' : ''
+                );
+            });
+        }
+    });
+    </script>
+</body>
+</html>

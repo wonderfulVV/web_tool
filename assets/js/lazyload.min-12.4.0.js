@@ -3,7 +3,9 @@ function _toConsumableArray(t){return _arrayWithoutHoles(t)||_iterableToArray(t)
 
 var lazyLoadInstance = new LazyLoad({
     elements_selector: ".media-content,img[data-src]",
-    //load_delay: 300
+    threshold: 500,  // 增加预加载距离，提前500px开始加载
+    load_delay: 300, // 增加小延迟以减少滚动时的请求数量
+    use_native: true // 启用原生懒加载（现代浏览器支持）
 });
 (function() {
     if (typeof window.CustomEvent === "function") return false;

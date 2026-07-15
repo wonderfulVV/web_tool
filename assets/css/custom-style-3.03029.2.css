@@ -1,0 +1,280 @@
+/*调整全局字体大小*/
+body,html{font-size:14px;}
+
+/*左导航悬浮sidebar-menu-inner宽度调整为90px*/
+.sidebar-popup.sidebar-menu-inner > div > ul > li.sidebar-item>ul{position:absolute;top:0px;left:10px;width:90px;z-index:99}
+.sidebar-popup.sidebar-menu-inner ul{width:90px}
+.sidebar-popup.sidebar-menu-inner ul li{width:90px}
+
+/*隐藏左导航scrollbar*/
+.sidebar-menu.flex-fill::-webkit-scrollbar{display:none}
+
+/*搜索框搜索图标颜色*/
+#search button i{color:#6C757D;font-size:18px}
+
+/*顶部导航栏字体+图标颜色 - 调整为与浅色背景协调的样式*/
+.big-header-banner .page-header{color:#495057;background:rgba(255,255,255,0.8);backdrop-filter:blur(5px);box-shadow:0 2px 8px rgba(0,0,0,0.05);transition:color .3s,background-color .3s}
+.big-header-banner:not(.header-bg) .page-header .navbar-nav>li>a,.big-header-banner:not(.header-bg) .navbar-menu a:not(.dropdown-item){color:#495057;font-weight:500;}
+.big-header-banner:not(.header-bg) .page-header .navbar-nav>li>a:hover,.big-header-banner:not(.header-bg) .navbar-menu a:not(.dropdown-item):hover{color:#007bff;}
+.big-header-banner:not(.header-bg) .header-mini-btn path{stroke:#495057;}
+.big-header-banner:not(.header-bg) .header-mini-btn label:hover path{stroke:#007bff;}
+
+/*搜索栏字体+背景 - 调整为更清晰的颜色*/
+.header-big #search-text{color:#333333;}
+.io-black-mode .header-big #search-text{color:#fff;}
+
+/*搜索activate图标颜色 - 调整为更清晰的颜色*/
+.header-big .search-type input:checked+label:before{content:'';border-width:8px 8px 0px 8px;border-style:solid;border-color:#007bff transparent transparent;position:absolute;left:50%;top:0;margin-left:-8px}
+
+/*主页搜索搜索框(头+底部)字体颜色 - 调整为更清晰的颜色*/
+.header-big:not(.no-bg) .s-type-list{color:#007bff}
+.header-big:not(.no-bg) .text-muted,.header-big:not(.no-bg) .search-type .menu-item a,.header-big:not(.no-bg) .big-title .h1{color:#333333!important}
+
+/*主页header-banner底部宽度*/
+.post-top{padding-bottom:50px}
+
+/*左导航二级导航标题左侧距离*/
+.sidebar-menu-inner ul li ul li a{margin-left:30px;}
+
+/*头部导航二级导航iconfont图标*/
+.navbar-collapse ul li.menu-item-has-children:after{content:'\e612';}
+
+/*搜索部分背景样式*/
+.header-big.css-color{background-size:unset;background-position:unset;animation:unset;}
+
+/*搜索热词样式调整 - 调整为更清晰的颜色*/
+.search-hot-text{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 5px 0px #cccccc94;
+    overflow: hidden;
+}
+.search-hot-text ul{
+    margin: 0;
+    padding: 5px 0;
+}
+.search-hot-text ul li{
+    line-height: 30px;
+    font-size: 14px;
+    padding: 0px 25px;
+    color: #333333;
+    cursor: pointer;
+}
+.io-black-mode .search-hot-text ul li{
+    color: #fff;
+}
+.search-hot-text ul li.current{
+    background: #f1f1f1;
+    color: #007bff;
+}
+.search-hot-text ul li:hover{
+    background: #f1f1f1;
+    color: #007bff;
+    cursor: pointer;
+}
+.search-hot-text ul li span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    background: #007bff;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+footer.main-footer .footer-text {
+    text-align: center;
+}
+footer.main-footer .footer-text a {
+    color: #007bff;
+}
+footer.main-footer .footer-text a:hover {
+    color: red;
+}
+
+/*About页面*/
+.panel .panel-body a {color: #007bff;}
+.panel .panel-body a:hover {color: #979898;}
+
+/*日期时间显示样式*/
+.datetime-display {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 15px;
+    color: #495057;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: none;
+}
+
+.datetime-display i {
+    margin-right: 8px;
+    color: #007bff;
+}
+
+.datetime-display .date {
+    margin-right: 10px;
+}
+
+.datetime-display .time {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.datetime-display .weekday {
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .datetime-display {
+        display: none; /* 在移动设备上隐藏，避免拥挤 */
+    }
+}
+
+/* 背景 */
+.io-grey-mode .page-container .grid-bg {
+  background-image: none; /*注释掉背景图片，背景由主题切换控制*/
+  background-color: #f9f9f9;
+  background-size: 15px 15px;
+}
+
+/* 黑色模式下收缩侧边栏样式修复 */
+.io-black-mode .mini-sidebar .sidebar-nav-inner {
+    background: #2c2e2f;
+}
+
+.io-black-mode .mini-sidebar .sidebar-nav .flex-bottom a,
+.io-black-mode .mini-sidebar .sidebar-menu-inner a {
+    color: #b2b8be;
+}
+
+.io-black-mode .mini-sidebar .sidebar-nav,
+.io-black-mode .mini-sidebar .sidebar-popup.sidebar-menu-inner ul li {
+    background: #2c2e2f;
+}
+
+/* 确保收缩状态下图标显示正常 */
+.io-black-mode .mini-sidebar .sidebar-menu ul:first-child>li.sidebar-item>a i {
+    color: #b2b8be;
+}
+
+/* 收缩侧边栏时隐藏"汪汪导航"文本 - 适用于所有模式 */
+.mini-sidebar .logo .logo-expanded span,
+.mini-sidebar .logo .logo-collapsed span {
+    display: none !important;
+}
+
+/* 移除所有模式下的网格背景，确保手机端和网页端样式一致 */
+.io-grey-mode .page-container .grid-bg {
+  background-image: none !important;
+  background-color: #f9f9f9;
+  background-size: auto !important;
+}
+
+.io-grey-mode .main-content.grid-bg {
+  background-image: none !important;
+  background-color: #f9f9f9;
+  background-size: auto !important;
+}
+
+@media (max-width: 767.98px) {
+  .io-grey-mode .page-container .grid-bg {
+    background-image: none !important;
+    background-size: auto !important;
+  }
+  
+  .io-grey-mode .main-content.grid-bg {
+    background-image: none !important;
+    background-size: auto !important;
+  }
+}
+
+/* 导航栏Logo样式美化 */
+.sidebar-logo .logo a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 0 !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  position: relative;
+}
+
+/* Logo容器样式 */
+.sidebar-logo .logo a .d-flex.items-center {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Logo图片样式 */
+.sidebar-logo .logo img.logo-light,
+.sidebar-logo .logo img.logo-dark {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 36px !important;
+  height: 36px !important;
+  object-fit: contain !important;
+  transition: opacity 0.3s ease !important;
+}
+
+/* Logo文字样式 */
+.sidebar-logo .logo span {
+  display: inline-block !important;
+  margin-left: 10px !important; /* 减小文字与logo之间的间距 */
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: inherit !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 夜间模式样式调整 */
+.io-dark-mode .sidebar-logo .logo a {
+  color: #fff !important;
+}
+
+.io-dark-mode .sidebar-logo .logo img.logo-light {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+.io-dark-mode .sidebar-logo .logo img.logo-dark {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* 确保日间模式下logo-light显示 */
+.io-grey-mode .sidebar-logo .logo img.logo-light {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.io-grey-mode .sidebar-logo .logo img.logo-dark {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* 确保夜间模式下文字正确显示 */
+.io-dark-mode .sidebar-logo .logo span {
+  color: #fff !important;
+}
+
+/* 确保在折叠和展开状态下都能正确显示 */
+.sidebar-logo .logo a.logo-expanded,
+.sidebar-logo .logo a.logo-collapsed {
+  width: 100%;
+}

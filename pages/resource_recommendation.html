@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热门资源推荐 - 汪汪导航</title>
+    <!-- 搜索引擎优化标签 -->
+    <link rel="canonical" href="https://dognav.org/pages/resource_recommendation.html" />
+    <meta name="keywords" content="热门资源推荐,学习资源,开发资源,设计资源,免费资源,优质网站" />
+    <meta name="description" content="汪汪导航热门资源推荐，精选各类优质学习资源、开发资源、设计资源等，帮助您发现更多有价值的内容。" />
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min-4.3.1.css">
+    <!-- 引入 Font Awesome -->
+    <link rel="stylesheet" href="/assets/fontawesome-5.15.4/css/all.min.css">
+    <!-- 引入自定义样式 -->
+    <link rel="stylesheet" href="/assets/css/style-3.03029.2.css">
+    <style>
+        body {
+            background-color: #f5f7fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        .card-header {
+            background-color: #fff;
+            padding: 20px 25px;
+            border-bottom: 1px solid #e1e8ed;
+        }
+        .card-body {
+            padding: 25px;
+        }
+        .resource-category {
+            margin-bottom: 30px;
+        }
+        .resource-category h2 {
+            color: #28a745;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e1e8ed;
+        }
+        .resource-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .resource-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        .resource-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .resource-item h3 a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .resource-item h3 a:hover {
+            color: #28a745;
+        }
+        .resource-item .resource-meta {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        .resource-item .resource-meta span {
+            margin-right: 15px;
+        }
+        .resource-item .resource-desc {
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+        .resource-item .resource-link {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+        .resource-item .resource-link:hover {
+            background-color: #218838;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #28a745;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .back-to-top.show {
+            opacity: 1;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #6c757d;
+            font-size: 14px;
+        }
+        .badge {
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+        }
+        .badge-free {
+            background-color: #17a2b8;
+            color: white;
+        }
+        .badge-premium {
+            background-color: #fd7e14;
+            color: white;
+        }
+        .badge-popular {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex align-items-center">
+                    <a href="../index.html" class="mr-3">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <h1 class="h3 mb-0">热门资源推荐</h1>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="mb-4">本页面精选了各类优质的在线资源，包括学习资料、开发工具、设计素材等，帮助您发现更多有价值的内容。定期更新，欢迎收藏。</p>
+                
+                <!-- 学习资源推荐 -->
+                <div class="resource-category">
+                    <h2><i class="fas fa-book mr-2"></i>学习资源推荐</h2>
+                    
+                    <div class="resource-item">
+                        <h3><a href="https://www.coursera.org/" target="_blank">Coursera</a> <span class="badge badge-popular">热门</span></h3>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-tag mr-1"></i>在线课程</span>
+                            <span><i class="fas fa-globe mr-1"></i>国际平台</span>
+                        </div>
+                        <div class="resource-desc">
+                            由世界顶尖大学提供的在线课程平台，涵盖计算机科学、商业、艺术等多个领域，部分课程提供证书。
+                        </div>
+                        <a href="https://www.coursera.org/" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt mr-1"></i>访问网站
+                        </a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h3><a href="https://edX.org/" target="_blank">edX</a> <span class="badge badge-free">免费</span></h3>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-tag mr-1"></i>在线教育</span>
+                            <span><i class="fas fa-university mr-1"></i>哈佛麻省理工联合创办</span>
+                        </div>
+                        <div class="resource-desc">
+                            由哈佛大学和麻省理工学院联合创建的在线教育平台，提供高质量的免费课程，部分课程提供付费证书。
+                        </div>
+                        <a href="https://edX.org/" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt mr-1"></i>访问网站
+                        </a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h3><a href="https://www.bilibili.com/" target="_blank">哔哩哔哩学习区</a> <span class="badge badge-popular">热门</span></h3>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-tag mr-1"></i>视频学习</span>
+                            <span><i class="fas fa-users mr-1"></i>社区驱动</span>
+                        </div>
+                        <div class="resource-desc">
+                            哔哩哔哩平台上的学习区，包含大量免费的学习视频，涵盖编程、设计、语言学习等多个领域。
+                        </div>
+                        <a href="https://www.bilibili.com/" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt mr-1"></i>访问网站
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 开发资源推荐 -->
+                <div class="resource-category">
+                    <h2><i class="fas fa-code mr-2"></i>开发资源推荐</h2>
+                    
+                    <div class="resource-item">
+                        <h3><a href="https://github.com/" target="_blank">GitHub</a> <span class="badge badge-popular">热门</span></h3>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-tag mr-1"></i>代码托管</span>
+                            <span><i class="fas fa-users mr-1"></i>开发者社区</span>
+                        </div>
+                        <div class="resource-desc">
+                            全球最大的代码托管平台和开发者社区，提供丰富的开源项目和学习资源。
+                        </div>
+                        <a href="https://github.com/" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt mr-1"></i>访问网站
+                        </a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h3><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a> <span class="badge badge-free">免费</span></h3>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-tag mr-1"></i>Web开发文档</span>
+                            <span><i class="fas fa-book mr-1"></i>权威指南</span>
+                        </div>
+                        <div class="resource-desc">
+                            Mozilla开发者网络提供的Web开发文档，包含HTML、CSS、JavaScript等前端技术的权威指南。
+                        </div>
+                        <a href="https://developer.mozilla.org/" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt mr-1"></i>访问网站
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 设计资源推荐 -->
+                <div class="resource-category">
+                    <h2><i class="fas fa-paint-brush mr-2"></i>设计资源推荐</h2>
+                    
+                    <div class="resource-item">
+                        <h3><a href="https://www.behance.net/" target="_blank">Behance</a> <span class="badge badge-premium">优质</span></h3>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-tag mr-1"></i>设计社区</span>
+                            <span><i class="fas fa-image mr-1"></i>创意灵感</span>
+                        </div>
+                        <div class="resource-desc">
+                            Adobe旗下的设计作品分享平台，汇集全球顶尖设计师的作品，是寻找创意灵感的好去处。
+                        </div>
+                        <a href="https://www.behance.net/" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt mr-1"></i>访问网站
+                        </a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h3><a href="https://pixabay.com/" target="_blank">Pixabay</a> <span class="badge badge-free">免费商用</span></h3>
+                        <div class="resource-meta">
+                            <span><i class="fas fa-tag mr-1"></i>图片素材</span>
+                            <span><i class="fas fa-copyright mr-1"></i>无版权</span>
+                        </div>
+                        <div class="resource-desc">
+                            提供大量高质量免费商用图片、插画和视频素材的网站，无需标注来源。
+                        </div>
+                        <a href="https://pixabay.com/" target="_blank" class="resource-link">
+                            <i class="fas fa-external-link-alt mr-1"></i>访问网站
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <div class="footer">
+        <p>© 2025 汪汪导航 | <a href="../index.html">返回主页</a></p>
+    </div>
+    
+    <!-- 引入 jQuery -->
+    <script src="/assets/js/jquery.min-3.2.1.js"></script>
+    <!-- 引入 Bootstrap JS -->
+    <script src="/assets/js/bootstrap.min-4.3.1.js"></script>
+    
+    <script type="text/javascript">
+        // 返回顶部按钮功能
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 页面加载完成后的操作
+        document.addEventListener('DOMContentLoaded', function() {
+            // 可以在这里添加其他初始化代码
+        });
+    </script>
+</body>
+</html>
