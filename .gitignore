@@ -1,1 +1,19 @@
-.idea
+# 编辑器 / IDE
+.idea/
+.vscode/
+*.swp
+
+# 操作系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 依赖与构建产物
+node_modules/
+
+# Vercel
+.vercel
+
+# 本地临时文件
+_*.txt
+*.log
